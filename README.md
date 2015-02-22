@@ -15,8 +15,6 @@ and symlink avrdude-autoreset to become avrdude.
     mv /usr/bin/avrdude /usr/bin/avrdude-original
     ln -s /usr/bin/avrdude-autoreset /usr/bin/avrdude
 
-Modify the autoreset script to use the pin that you wired up to the reset pin.  See the line in
-autoreset where we do "pin = 11" and change the 11 to your gpio pin number.
 
-Now when you run avrdude from anywhere (including via arduino's normal UI) it will flag dtr when
-it is about to upload hex data.
+Now when you run avrdude from anywhere (including via arduino's normal UI) it will flag GPIO13 when
+it is about to upload hex data to Ardhat.

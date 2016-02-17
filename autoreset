@@ -7,7 +7,7 @@ fd = sys.stdin.fileno()
 fl = fcntl.fcntl(fd, fcntl.F_GETFL)
 fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 dtr = re.compile('.+TIOCM_DTR.+')
 start = time.time()
 
